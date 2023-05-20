@@ -9,6 +9,20 @@ const swiper = new Swiper('.swiper', {
   initialSlide: 0, // Початковий слайд (індексується з 0)
 });
 
+const slides = document.querySelectorAll('.cases__swiper-slide');
+const btns = document.querySelectorAll('.cases__btn');
+
+btns.forEach((btn, index) => {
+  btn.addEventListener('click', () => {
+    slides.forEach((slide, slideIndex) => {
+      if (slideIndex === index) {
+        slide.style.width = '700px';
+      } else {
+        slide.style.width = '147px';
+      }
+    });
+  });
+});
 
 
 

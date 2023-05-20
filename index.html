@@ -7,11 +7,16 @@
     <title>Druzi</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
+    
+
+
+
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="css/slick.css"> -->
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
 
@@ -136,11 +141,14 @@
             </div>
 
             
-            
+           
+
+        <div class="container__slider">
+            <div class="blog__button swiper-button-left">
+                <img src="images/left.png" alt="">
+            </div>
                 <div class="blog__slider swiper">
-                    <div class="blog__button swiper-button-left">
-                        <img src="images/left.png" alt="">
-                    </div>
+                    
                     <div class="swiper-wrapper">
                      <div class="swiper-slide blog__item">
                        <h1 class="blog__item-title">
@@ -184,12 +192,15 @@
                            <a href="#" class="blog__item-link">READ MORE ></a>
                        </div>
                      </div>
+                     
                    </div>
-                
-                   <div class="blog__button swiper-button-right">
-                     <img src="images/right.png" alt="">
-                   </div>
+                   
+                  </div>
+                  <div class="blog__button swiper-button-right">
+                    <img src="images/right.png" alt="">
+                   
                 </div> 
+           </div>
             
 
         </div>
@@ -203,7 +214,45 @@
                 <h2>Our cases</h2>
             </div>
 
-        
+            
+
+            <div class="cases__swiper-container">
+                <div class="cases__swiper-wrapper">
+                  <div class="cases__swiper-slide active-slide ">
+                    <div class="cases__first">
+                        <button class="cases__btn">
+                            <img src="images/play.png" alt="">
+                        </button>
+                    </div>
+                  </div>
+                  <div class="cases__swiper-slide inactive-slide">
+                    <div class="cases__two">
+                        <button class="cases__btn">
+                            <img src="images/play.png" alt="">
+                        </button>
+                    </div>
+                  </div>
+                  <div class="cases__swiper-slide inactive-slide">
+                    <div class="cases__three">
+                        <button class="cases__btn">
+                            <img src="images/play.png" alt="">
+                        </button>
+                    </div>
+                  </div>
+                  <div class="cases__swiper-slide inactive-slide">
+                   
+                        <div class="cases__four">
+                            <button class="cases__btn">
+                                <img src="images/play.png" alt="">
+                            </button>
+                        </div>
+                        
+                    
+                  </div>
+                </div>
+              </div>
+              
+              
               
               
 
@@ -213,10 +262,10 @@
    
 
     
-    
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/slick.min.js"></script>
+    <!-- <script src="js/slick.min.js"></script> -->
 
 </body>
 </html>

@@ -214,77 +214,68 @@ body{
 }
 
 
-.swiper-slide{
-    border: solid 1px white;
+.swiper-slide {
     width: 347px;
     height: 450px;
+    border: solid 1px white;
 }
-.title__wrapper{
-    height: 168px
+
+.title__wrapper {
+    height: 168px;
 }
-.blog__item-title{
+
+.blog__item-title {
     font-size: 32px;
     line-height: 39px;
     text-transform: uppercase;
-    padding: 108px 101px 0 17px
+    padding: 108px 101px 0 17px;
 }
 
-.blog__item-img{
-    width: 221px 16px;
-    margin: 0 109px 33px 17px
+.blog__item-img {
+    width: 221px;
+    height: 16px;
+    margin: 0 109px 33px 17px;
 }
 
-.swiper-wrapper{
-    background: white
-}
-.blog__item-link{
-    font-size: 12px;
-    color: #363636;
-    margin: 0 50px 111px 169px;
+.container__slider {
+    display: flex;
+    align-items: center;
 }
 
-.blog__slider{
+.swiper-wrapper {
+    max-width: 1100px;
+}
+
+
+.blog__slider {
     position: relative;
-    padding-top: 50px;
-    margin-bottom: 100px;
 }
 
-.blog__button{
-    position: absolute;
-    top: 0;
-    cursor: pointer;
-    left: 50%;
+.blog__button {
+    cursor: pointer; 
 }
 
-.swiper-button-left{
-    transform: translate(-41px);
-}
-
-.swiper-button-right{
-    transform: translate(8px);
-}
 
 .blog__item-link{
     color: #D3F332;
     font-size: 20px;
     line-height: 24px;
     text-decoration-line: underline;
+    
+}
+
+.blog__item-more{
+    margin: 0 50px 111px 169px;  
 }
 
 
 
-  .swiper-button-left {
-    /* Стилі для кнопки "Вліво" */
-  }
-  
-  .swiper-button-right {
-    /* Стилі для кнопки "Вправо" */
-  }
-  
 
 
 
-
+.cases_1{
+    margin-bottom: 300px
+}
 
 .cases__title{
     margin-bottom: 35px;
@@ -293,17 +284,77 @@ body{
 
 
 
+.my-slide {
+    width: 147px;
+  }
+  
+  .active-slide {
+    width: 703px;
+  }
+  
+.cases__swiper-wrapper{
+    display: flex;
+   
+}
+.cases__swiper-slide{
+    min-width: 147px;
+    height: 393px;
+    position: relative;
+}
+.cases__swiper-slide:nth-child(1) {
+    margin-right: 79px;
+  }
+  
+  .cases__swiper-slide:nth-child(2) {
+    margin-right: 30px;
+  }
+  
+  .cases__swiper-slide:nth-child(3) {
+    margin-right: 12px;
+  }
   
 
 
 
+.cases__btn{
+    position: absolute;
+    bottom: 35px;
+    left: 29px;
+    cursor: pointer;
+}
+
+.cases__first{
+    background: #D3F332;
+    width: 100%;
+    height: 100%;
+    margin-right: 79px;
+}
+.cases__two{
+    background: #F5544B;
+    width: 100%;
+    height: 100%;
+    box-shadow: -80px 2px 47px 23px #000000;
+    margin-right: 30px;
+}
+.cases__three{
+    background: #2844E6;
+    width: 100%;
+    height: 100%;
+    box-shadow: -80px 2px 47px 23px #000000;
+    margin-right: 12px;
+}
+.cases__four{
+    background: #595CD4;
+    width: 100%;
+    height: 100%;
+    box-shadow: -80px 2px 47px 23px #000000;
+}
 
 
 
 
 
-
-
+  
 
 @media (max-width: 991px){
     .menu{
