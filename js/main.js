@@ -17,7 +17,7 @@ const swiper = new Swiper('.swiper', {
       slidesPerView: 1,
     }
   },
-  initialSlide: 0, // Початковий слайд (індексується з 0)
+  initialSlide: 0, 
 });
 
 const slides = document.querySelectorAll('.cases__swiper-slide');
@@ -28,10 +28,10 @@ btns.forEach((btn, index) => {
     slides.forEach((slide, slideIndex) => {
       if (slideIndex === index) {
         slide.style.width = '700px';
-        slide.style.transition = 'width 0.5s ease'; // Додайте плавність переходу
+        slide.style.transition = 'width 0.5s ease';
       } else {
         slide.style.width = '147px';
-        slide.style.transition = 'width 0.5s ease'; // Додайте плавність переходу
+        slide.style.transition = 'width 0.5s ease'; 
       }
     });
   });
