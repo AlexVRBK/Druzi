@@ -6,6 +6,17 @@ const swiper = new Swiper('.swiper', {
     nextEl: '.swiper-button-right',
     prevEl: '.swiper-button-left',
   },
+  breakpoints: {
+    650: {
+      slidesPerView: 3,
+    },
+    550: {
+      slidesPerView: 2,
+    },
+  300: {
+      slidesPerView: 1,
+    }
+  },
   initialSlide: 0, // Початковий слайд (індексується з 0)
 });
 
