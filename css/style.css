@@ -143,7 +143,7 @@ body{
 }
 
 .main__check:hover{
-    cursor: pointer
+    cursor: pointer;
 }
 
 .main__check-img{
@@ -254,6 +254,9 @@ body{
 .blog__button {
     cursor: pointer; 
 }
+.blog__button:active {
+    transform: scale(0.9);
+}
 
 
 .blog__item-link{
@@ -287,6 +290,9 @@ body{
 .my-slide {
     width: 147px;
   }
+  .my-slide:nth-child(3) {
+    width: 230px;
+  }
   
   .active-slide {
     width: 703px;
@@ -313,15 +319,46 @@ body{
     margin-right: 12px;
   }
   
-
+  .slide__year {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-top: 35px;
+  }
+  
+  
 
 
 .cases__btn{
     position: absolute;
+    cursor: pointer;
+    background-color: transparent;
+    border: none; 
+    padding: 0; 
+}
+.cases__btn:active {
+    transform: scale(0.9);
+}
+.cases__first .cases__btn {
     bottom: 35px;
     left: 29px;
-    cursor: pointer;
-}
+  }
+  
+  .cases__two .cases__btn {
+    bottom: 31px;
+    left: 18px;
+  }
+  
+  .cases__three .cases__btn {
+    bottom: 31px;
+    left: 9px;
+  }
+  
+  .cases__four .cases__btn {
+    bottom: 31px;
+    left: 18px;
+  }
 
 .cases__first{
     background: #D3F332;
