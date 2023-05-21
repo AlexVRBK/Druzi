@@ -40,6 +40,12 @@ body{
     line-height: 17px;
     background: black;
     color: #FFFFFF;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.section {
+    height: 100vh;
 }
 
 .container{
@@ -111,7 +117,27 @@ body{
     color: #D3F332;
 }
 
+.translate__link:active {
+    color: #00ff00;
+}
 
+
+.main__inner {
+    opacity: 0; /* Початкова прозорість блоку */
+    animation: fadeIn 2s ease-in-out forwards; /* Анімація з поступовим з'явленням блоку, тривалість 2 секунди */
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0; /* Початкова прозорість блоку */
+      transform: translateY(30px); /* Початкове положення блоку (зміщення по вертикалі) */
+    }
+    100% {
+      opacity: 1; /* Кінцева прозорість блоку */
+      transform: translateY(0); /* Кінцеве положення блоку (без зміщення) */
+    }
+  }
+  
 
 .main{
     max-width: 1172px;
@@ -170,6 +196,22 @@ body{
 
 
 
+.about__wrapper_one,
+.about__wrapper_two {
+  opacity: 0; /* Початкова прозорість блоку */
+  animation: fadeIn 1s ease-in-out forwards; /* Анімація з поступовим з'явленням блоку */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Початкова прозорість блоку */
+    transform: translateY(20px); /* Початкове положення блоку (зміщення по вертикалі) */
+  }
+  100% {
+    opacity: 1; /* Кінцева прозорість блоку */
+    transform: translateY(0); /* Кінцеве положення блоку (без зміщення) */
+  }
+}
 
 .about__wrapper{
     display: flex;
@@ -518,6 +560,12 @@ body{
         font-size: 16px;
     }
 }
+
+@media (max-width: 1024px) {
+    .section {
+      height: auto; 
+    }
+  }
 
 @media (max-width: 1000px) {
     .menu__list {
