@@ -643,7 +643,7 @@ body{
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 890px) {
     .menu__list {
         display: flex;
         flex-direction: column;
@@ -659,7 +659,9 @@ body{
         margin-left: 0;
         margin-bottom: 10px;
     }
-    
+}
+
+@media (max-width: 800px) {
     .container{
         max-width: 600px;
         margin: 0 auto;
