@@ -446,6 +446,11 @@ body{
         max-width: 1200px;
         margin: 0 auto;
     }
+    .about__wrapper_one .about__wrapper_two{
+        width: auto;
+        font-size: 25px;
+        line-height: 31px;
+    }
 }
 
 
@@ -469,6 +474,7 @@ body{
 
 
 @media (max-width: 1200px) {
+    
     .header__inner{
         max-width: 1200px;
     }
