@@ -442,6 +442,7 @@ body{
         margin: auto;
     }
     .container{
+        padding-top: 0;
         max-width: 1200px;
         margin: 0 auto;
     }
@@ -555,7 +556,9 @@ body{
     .slide__year {
         font-size: 16px;
     }
-
+    .services__title{
+        margin-top: 200px
+    }
     
 }
 
