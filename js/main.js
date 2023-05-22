@@ -21,21 +21,21 @@ const swiper = new Swiper('.swiper', {
 });
 
 const slides = document.querySelectorAll('.cases__swiper-slide');
-const btns = document.querySelectorAll('.cases__btn');
 
-btns.forEach((btn, index) => {
-  btn.addEventListener('click', () => {
-    slides.forEach((slide, slideIndex) => {
-      if (slideIndex === index) {
-        slide.style.width = '700px';
-        slide.style.transition = 'width 0.5s ease';
+slides.forEach((slide, index) => {
+  slide.addEventListener('mouseenter', () => {
+    slides.forEach((s, sIndex) => {
+      if (sIndex === index) {
+        s.classList.add('active-slide');
+        s.style.width = '703px';
       } else {
-        slide.style.width = '147px';
-        slide.style.transition = 'width 0.5s ease'; 
+        s.classList.remove('active-slide');
+        s.style.width = '147px';
       }
     });
   });
 });
+
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
@@ -157,6 +157,27 @@ window.addEventListener('wheel', function(event) {
 
 
 
+// Отримуємо всі кнопки
+const videoButtons = document.querySelectorAll('.cases__btn');
+
+// Перебираємо кожну кнопку і додаємо обробник події click
+videoButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    // Отримуємо посилання на відео з атрибута data-video-src кнопки
+    const videoSrc = button.dataset.videoSrc;
+    // Перевіряємо, чи є посилання на відео
+    if (videoSrc) {
+      // Визначаємо розміри вікна
+      const width = 800;
+      const height = 600;
+      // Обчислюємо позицію вікна, щоб воно було по центру екрана
+      const left = (window.innerWidth - width) / 2 + window.screenLeft;
+      const top = (window.innerHeight - height) / 2 + window.screenTop;
+      // Відкриваємо відео в новому вікні або спливаючому окні
+      window.open(videoSrc, 'videoPopup', `width=${width},height=${height},left=${left},top=${top}`);
+    }
+  });
+});
 
 
 
