@@ -85,7 +85,18 @@ window.addEventListener('scroll', animateOnScroll);
 animateOnScroll(); 
 
 
+function animatesOnScroll() {
+  var elements = document.querySelectorAll('.main__desc');
+  elements.forEach(function(element) {
+    element.classList.remove('show'); // Видаляємо клас show з усіх елементів перед перевіркою видимості
+    if (isElementInViewport(element)) {
+      element.classList.add('show');
+    }
+  });
+}
 
+window.addEventListener('scroll', animatesOnScroll);
+animatesOnScroll(); 
 
 
 

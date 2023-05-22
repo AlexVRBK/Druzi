@@ -183,7 +183,8 @@ body{
 
 .about__title,
 .about__wrapper_one,
-.about__wrapper_two {
+.about__wrapper_two,
+.main__desc {
   opacity: 0;
   transition: opacity 1s;
 }
