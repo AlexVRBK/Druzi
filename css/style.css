@@ -50,7 +50,7 @@ body{
 
 .container{
     max-width: 1348px;
-    padding-top: 12px;
+    padding-top: 15px;
     margin: 0 auto;
 }
 
@@ -470,10 +470,34 @@ body{
     .blog__item-title{
         font-size: 24px
     }
+    .about__wrapper_two{
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .about__wrapper_one{
+        font-size: 24px;
+        line-height: 32px;
+    }
 }
 
 
 @media (max-width: 1200px) {
+    .about__wrapper_two{
+        font-size: 22px;
+        line-height: 30px;
+    }
+    .about__wrapper_one{
+        font-size: 22px;
+        line-height: 30px;
+    }
+    .about__wrapper_two.show{
+        font-size: 22px;
+        line-height: 30px;
+    }
+    .about__wrapper_one.show{
+        font-size: 22px;
+        line-height: 30px;
+    }
     
     .header__inner{
         max-width: 1200px;
@@ -563,7 +587,7 @@ body{
         font-size: 16px;
     }
     .services__title{
-        margin-top: 200px
+        margin-top: 50px
     }
     
 }
@@ -696,6 +720,14 @@ body{
         color: #FFFFFF;
         margin-top: 25px;
     }
+    .about__wrapper_two.show{
+        font-size: 19px;
+        line-height: 29px;
+    }
+    .about__wrapper_one.show{
+        font-size: 19px;
+        line-height: 29px;
+    }
 }
 @media (max-width: 890px) {
     .menu__link {
@@ -712,10 +744,13 @@ body{
         line-height: 40px;
     }
 
-
-    .about__wrapper_one .about__wrapper_two{
-        font-size: 25px;
-        line-height: 32px;
+    .about__wrapper_two.show{
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .about__wrapper_one.show{
+        font-size: 18px;
+        line-height: 26px;
     }
 
     h2 {
@@ -1009,6 +1044,14 @@ body{
         box-shadow: -5px 2px 47px 23px #000000;
     }
       
+    .about__wrapper_two.show{
+        font-size: 15px;
+        line-height: 22px;
+    }
+    .about__wrapper_one.show{
+        font-size: 15px;
+        line-height: 22px;
+    }
 }
 
 @media (max-width: 550px) {
