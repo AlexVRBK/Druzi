@@ -50,7 +50,7 @@ body{
 
 .container{
     max-width: 1348px;
-    /* padding-top: 42px; */
+    padding-top: 12px;
     margin: 0 auto;
 }
 
@@ -555,6 +555,8 @@ body{
     .slide__year {
         font-size: 16px;
     }
+
+    
 }
 
 @media (max-width: 1024px) {
@@ -701,10 +703,6 @@ body{
         line-height: 40px;
     }
 
-    .translate__list{
-        justify-content: flex-end;
-        font-size: 16px
-    }
 
     .about__wrapper_one .about__wrapper_two{
         font-size: 25px;
@@ -789,12 +787,18 @@ body{
     }
 }
 
-
-
-
-
-
 @media (max-width: 740px){
+    .about__wrapper_one .about__wrapper_two{
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .translate{
+        width: auto;
+    }
+    .translate__list{
+        justify-content: flex-end;
+        font-size: 16px
+    }
     .menu__link {
         font-size: 36px
         
@@ -882,14 +886,6 @@ body{
    
 }
 
-
-
-
-
-
-
-
-
 @media (max-width: 650px) {
    
     .main__title {
@@ -907,10 +903,7 @@ body{
         font-size: 16px
     }
 
-    .about__wrapper_one .about__wrapper_two{
-        font-size: 23px;
-        line-height: 32px;
-    }
+    
 
     h2 {
         font-weight: 400;
@@ -1116,8 +1109,8 @@ body{
 
     .slide__year {
         font-weight: 500;
-        font-size: 12px;
-        line-height: 22px;
+        font-size: 10px;
+        line-height: 20px;
         color: #FFFFFF;
         margin-top: 25px;
     }
@@ -1222,9 +1215,9 @@ body{
     }
 
     .slide__year {
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 22px;
+        font-weight: 300;
+        font-size: 7px;
+        line-height: 12px;
         color: #FFFFFF;
         margin-top: 25px;
     }

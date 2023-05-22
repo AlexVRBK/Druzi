@@ -48,19 +48,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 function isElementInViewport(element) {
   var rect = element.getBoundingClientRect();
   return (
@@ -71,24 +58,28 @@ function isElementInViewport(element) {
   );
 }
 
+
+
 function animateOnScroll() {
   var elements = document.querySelectorAll('.about__wrapper_one, .about__wrapper_two');
   elements.forEach(function(element) {
-    element.classList.remove('show'); // Видаляємо клас show з усіх елементів перед перевіркою видимості
-    if (isElementInViewport(element)) {
+    element.classList.remove('show');
+    if (isElementInViewport(element) || window.innerWidth < 1200) {
       element.classList.add('show');
     }
   });
 }
 
 window.addEventListener('scroll', animateOnScroll);
-animateOnScroll(); 
+window.addEventListener('resize', animateOnScroll);
+animateOnScroll();
+
 
 
 function animatesOnScroll() {
   var elements = document.querySelectorAll('.main__desc');
   elements.forEach(function(element) {
-    element.classList.remove('show'); // Видаляємо клас show з усіх елементів перед перевіркою видимості
+    element.classList.remove('show');  
     if (isElementInViewport(element)) {
       element.classList.add('show');
     }
@@ -97,9 +88,6 @@ function animatesOnScroll() {
 
 window.addEventListener('scroll', animatesOnScroll);
 animatesOnScroll(); 
-
-
-
 
 
 
@@ -114,7 +102,7 @@ const windowHeight = window.innerHeight;
 let isScrolling = false;
 
 window.addEventListener('wheel', function(event) {
-  if (!isScrolling && window.innerWidth >= 740) { // Додана перевірка на ширину екрану
+  if (!isScrolling && window.innerWidth >= 740) { 
     isScrolling = true;
 
     setTimeout(function() {
@@ -151,39 +139,23 @@ window.addEventListener('wheel', function(event) {
 
 
 
-
-
-
-
-
-// Отримуємо всі кнопки
 const videoButtons = document.querySelectorAll('.cases__btn');
 
-// Перебираємо кожну кнопку і додаємо обробник події click
 videoButtons.forEach(button => {
   button.addEventListener('click', () => {
-    // Отримуємо посилання на відео з атрибута data-video-src кнопки
     const videoSrc = button.dataset.videoSrc;
-    // Перевіряємо, чи є посилання на відео
     if (videoSrc) {
-      // Визначаємо розміри вікна
       const width = 800;
       const height = 600;
-      // Обчислюємо позицію вікна, щоб воно було по центру екрана
       const left = (window.innerWidth - width) / 2 + window.screenLeft;
       const top = (window.innerHeight - height) / 2 + window.screenTop;
-      // Відкриваємо відео в новому вікні або спливаючому окні
       window.open(videoSrc, 'videoPopup', `width=${width},height=${height},left=${left},top=${top}`);
     }
   });
 });
 
-
-
-
-
 const btn = document.querySelector('.menu-btn');
-const nav = document.querySelector('.menu'); // Змінено селектор на '.menu'
+const nav = document.querySelector('.menu'); 
 
 btn.addEventListener('click', () => {
   nav.classList.toggle('menu-open');
