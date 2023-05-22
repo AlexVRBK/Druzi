@@ -122,21 +122,7 @@ body{
 }
 
 
-.main__inner {
-    opacity: 0; /* Початкова прозорість блоку */
-    animation: fadeIn 2s ease-in-out forwards; /* Анімація з поступовим з'явленням блоку, тривалість 2 секунди */
-  }
-  
-  @keyframes fadeIn {
-    0% {
-      opacity: 0; /* Початкова прозорість блоку */
-      transform: translateY(30px); /* Початкове положення блоку (зміщення по вертикалі) */
-    }
-    100% {
-      opacity: 1; /* Кінцева прозорість блоку */
-      transform: translateY(0); /* Кінцеве положення блоку (без зміщення) */
-    }
-  }
+
   
 
 .main{
@@ -195,22 +181,15 @@ body{
 
 
 
-
+.about__title,
 .about__wrapper_one,
 .about__wrapper_two {
-  opacity: 0; /* Початкова прозорість блоку */
-  animation: fadeIn 1s ease-in-out forwards; /* Анімація з поступовим з'явленням блоку */
+  opacity: 0;
+  transition: opacity 1s;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0; /* Початкова прозорість блоку */
-    transform: translateY(20px); /* Початкове положення блоку (зміщення по вертикалі) */
-  }
-  100% {
-    opacity: 1; /* Кінцева прозорість блоку */
-    transform: translateY(0); /* Кінцеве положення блоку (без зміщення) */
-  }
+.show {
+  opacity: 1;
 }
 
 .about__wrapper{
