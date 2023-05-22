@@ -72,7 +72,7 @@ function isElementInViewport(element) {
 }
 
 function animateOnScroll() {
-  var elements = document.querySelectorAll('.about__wrapper_one, .about__wrapper_two,  .about__title');
+  var elements = document.querySelectorAll('.about__wrapper_one, .about__wrapper_two');
   elements.forEach(function(element) {
     element.classList.remove('show'); // Видаляємо клас show з усіх елементів перед перевіркою видимості
     if (isElementInViewport(element)) {
@@ -114,7 +114,7 @@ const windowHeight = window.innerHeight;
 let isScrolling = false;
 
 window.addEventListener('wheel', function(event) {
-  if (!isScrolling) {
+  if (!isScrolling && window.innerWidth >= 740) { // Додана перевірка на ширину екрану
     isScrolling = true;
 
     setTimeout(function() {
@@ -156,7 +156,6 @@ window.addEventListener('wheel', function(event) {
 
 
 
-
 // Отримуємо всі кнопки
 const videoButtons = document.querySelectorAll('.cases__btn');
 
@@ -181,3 +180,11 @@ videoButtons.forEach(button => {
 
 
 
+
+
+const btn = document.querySelector('.menu-btn');
+const nav = document.querySelector('.menu'); // Змінено селектор на '.menu'
+
+btn.addEventListener('click', () => {
+  nav.classList.toggle('menu-open');
+});

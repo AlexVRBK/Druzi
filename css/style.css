@@ -50,7 +50,7 @@ body{
 
 .container{
     max-width: 1348px;
-    padding-top: 42px;
+    /* padding-top: 42px; */
     margin: 0 auto;
 }
 
@@ -73,6 +73,10 @@ body{
 
 .menu__list{
     display: flex;
+}
+
+.menu-btn {
+    display: none;
 }
 
 .menu__item + .menu__item{
@@ -129,7 +133,7 @@ body{
     max-width: 1172px;
     margin: 0 auto;
     padding-top: 57px;
-    padding-bottom: 69px;
+    /* padding-bottom: 69px; */
 }
 
 .main__inner{
@@ -181,7 +185,7 @@ body{
 
 
 
-.about__title,
+
 .about__wrapper_one,
 .about__wrapper_two,
 .main__desc {
@@ -683,17 +687,37 @@ body{
     }
 }
 @media (max-width: 890px) {
-    .menu__list {
-        display: flex;
-        flex-direction: column;
-        margin-top: 30px;
-        align-items: center;
+    .menu__link {
+        font-size: 16px
     }
     
-    .menu__list {
-        margin-top: 10px;
+    .main__title {
+        font-size: 52px;
+    line-height: 68px;
     }
-    
+
+    .main__desc {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .translate__list{
+        justify-content: flex-end;
+        font-size: 16px
+    }
+
+    .about__wrapper_one .about__wrapper_two{
+        font-size: 25px;
+        line-height: 32px;
+    }
+
+    h2 {
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 63px;
+    }
+
+
     .menu__item {
         margin-left: 0;
         margin-bottom: 10px;
@@ -765,7 +789,135 @@ body{
     }
 }
 
+
+
+
+
+
+@media (max-width: 740px){
+    .menu__link {
+        font-size: 36px
+        
+    }
+    .menu-btn{
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+        order: 1;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        z-index: 50;
+    }
+    .logo,
+    .translate {
+        position: relative;
+        z-index: 50;
+    }
+    .btn-line{
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        height: 2px;
+        transition: .3s ease;
+    }
+    .btn-line:nth-child(1){
+        top: 0;
+    }
+    .btn-line:nth-child(2){
+        top: 20px;
+    }
+    .btn-line:nth-child(3){
+        top: 20px;
+    }
+    .btn-line:nth-child(4){
+        top: 40px;
+    }
+    .menu-open .btn-line:nth-child(1){
+        transform: scaleX(0);
+    }
+    .menu-open .btn-line:nth-child(2){
+        transform: rotate(45deg);
+    }
+    .menu-open .btn-line:nth-child(3){
+        transform: rotate(-45deg);
+    }
+    .menu-open .btn-line:nth-child(4){
+        transform: scaleX(0);
+    }
+    
+    .menu__list{
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background-color: #0A0A0A;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transform: translateY(-100%);
+        transition: .3s ease;
+        margin-left: 0px;
+        margin-top: 0px;
+        gap: 20px
+    }
+    .menu-open .menu__list{
+        transform: translateY(0%);
+    }
+    .menu-item{
+        padding: 50px 0;
+        font-size: 57px;
+    }
+    .images-new{
+        display: none;
+    }
+    .new-text p,
+    .new-text b {
+       max-width: 100%; 
+    }
+   
+}
+
+
+
+
+
+
+
+
+
 @media (max-width: 650px) {
+   
+    .main__title {
+        font-size: 44px;
+        line-height: 60px;
+    }
+
+    .main__desc {
+        font-size: 22px;
+        line-height: 37px;
+    }
+
+    .translate__list{
+        justify-content: flex-end;
+        font-size: 16px
+    }
+
+    .about__wrapper_one .about__wrapper_two{
+        font-size: 23px;
+        line-height: 32px;
+    }
+
+    h2 {
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 63px;
+    }
+
     .container{
         max-width: 500px;
         margin: 0 auto;
@@ -973,6 +1125,17 @@ body{
 }
   
 @media (max-width: 400px) {
+    h2 {
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 53px;
+    }
+
+    .about__wrapper_one .about__wrapper_two{
+        font-size: 15px;
+        line-height: 25px;
+    }
+
     .container{
         max-width: 330px;
         margin: 0 auto;
