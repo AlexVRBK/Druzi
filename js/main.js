@@ -91,3 +91,61 @@ animateOnScroll();
 
 
 
+
+const headerSection = document.querySelector('.header');
+const aboutSection = document.querySelector('.about');
+const servicesSection = document.querySelector('.our_services_1');
+const casesSection = document.querySelector('.cases_1');
+
+const sections = [headerSection, aboutSection, servicesSection, casesSection];
+const windowHeight = window.innerHeight;
+
+let isScrolling = false;
+
+window.addEventListener('wheel', function(event) {
+  if (!isScrolling) {
+    isScrolling = true;
+
+    setTimeout(function() {
+      const scrollPosition = window.scrollY || window.pageYOffset;
+
+      let targetSection = null;
+
+      for (let i = 0; i < sections.length; i++) {
+        const sectionTop = sections[i].offsetTop;
+        const sectionHeight = sections[i].offsetHeight;
+
+        if (event.deltaY > 0 && scrollPosition < sectionTop) {
+          targetSection = sections[i];
+          break;
+        } else if (event.deltaY < 0 && scrollPosition <= sectionTop + sectionHeight - windowHeight) {
+          if (i > 0) {
+            targetSection = sections[i - 1];
+          } else {
+            targetSection = sections[0];
+          }
+          break;
+        }
+      }
+
+      if (targetSection) {
+        window.scrollTo(0, targetSection.offsetTop);
+      }
+
+      isScrolling = false;
+    }, 200);
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
