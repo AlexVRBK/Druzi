@@ -1,4 +1,4 @@
-# Druzi (test)
+# Druzi
 - HTML
 - CSS 
 - JavaScript <p align="left">
